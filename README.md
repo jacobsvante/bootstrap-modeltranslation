@@ -2,20 +2,20 @@
 
 **Author:** Jacob Magnusson. [Follow me on Twitter][twitter]
 
-# Overview
+## Overview
 
 bootstrap-modeltranslation is a mini-package for adding tabbable [django-modeltranslation] translation fields to [django-admin-bootstrapped].
 
 ![Example image](https://raw.github.com/jmagnusson/bootstrap-modeltranslation/master/example.png)
 
-# Tested with
+## Tested with
 
 * Python 2.7.3
 * Django 1.5
 * [django-admin-bootstrapped] 0.3.2
 * [django-modeltranslation] 0.6.1
 
-# Installation
+## Installation
 
 Install using `pip`:
 
@@ -55,13 +55,13 @@ class SomeModelInlineAdmin(TranslationStackedInline):
     pass
 ```
 
-# Documentation
+## Documentation
 
 [docs]
 
-# Changelog
+## Changelog
 
-## 0.1.0
+### 0.1.0
 
 **Date**: May 27, 2013
 
