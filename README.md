@@ -17,23 +17,20 @@ bootstrap-modeltranslation is a small compatibility layer between [django-admin-
 
 # Installation
 
-Install using `pip`...
+Install using `pip`:
 
     pip install bootstrap-modeltranslation
 
-...or clone the project from github.
+Add package to `INSTALLED_APPS` (order doesn't matter):
 
-    git clone git@github.com:jmagnusson/bootstrap-modeltranslation.git
-    pip install -r requirements.txt
-
-Add package to `INSTALLED_APPS`:
-
-    INSTALLED_APPS = (
-        'django_admin_bootstrapped',
-        'bootstrap_modeltranslation',
-        ...
-        'modeltranslation',
-    )
+```python
+INSTALLED_APPS = (
+    'django_admin_bootstrapped',
+    'modeltranslation',
+    ...
+    'bootstrap_modeltranslation',
+)
+```
 
 NOTE: `bootstrap_modeltranslation` must come before `modeltranslation` for tabbed translation fields to work
 
