@@ -43,19 +43,20 @@ Copy the static files to your project:
 
 Import admin classes for inheritance and use just like you would the default ones ([read the modeltranslation docs for more info][django-modeltranslation-docs-admin]).
 
-    from bootstrap_modeltranslation.admin import (
-        TranslationAdmin,
-        TranslationTabularInline, 
-        TranslationStackedInline, 
-        TranslationGenericTabularInline,
-        TranslationGenericStackedInline)
-    
-    class SomeModelAdmin(TranslationAdmin):
-        pass
-    
-    class SomeModelInlineAdmin(TranslationStackedInline):
-        pass
+```python
+from bootstrap_modeltranslation.admin import (
+    TranslationAdmin,
+    TranslationTabularInline, 
+    TranslationStackedInline, 
+    TranslationGenericTabularInline,
+    TranslationGenericStackedInline)
 
+class SomeModelAdmin(TranslationAdmin):
+    pass
+
+class SomeModelInlineAdmin(TranslationStackedInline):
+    pass
+```
 
 # Documentation
 
