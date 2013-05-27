@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+from __future__ import print_function
 from distutils.core import setup
 import os
 import sys
@@ -10,9 +11,9 @@ version = __import__(appname).__version__
 
 if sys.argv[-1] == 'publish':
     os.system("python setup.py sdist upload")
-    print "You probably want to also tag the version now:"
-    print "  git tag -a %s -m 'version %s'" % (version, version)
-    print "  git push --tags"
+    print("You probably want to tag the version if the upload was successful:")
+    print("  git tag -a {0} -m 'Version {0}' && git push " \
+          "--tags".format(version))
     sys.exit()
 
 setup(
