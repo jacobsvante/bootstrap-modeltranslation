@@ -57,15 +57,7 @@ class SomeModelInlineAdmin(TranslationStackedInline):
 
 # Documentation
 
-[docs]
-
-# Changelog
-
-## 0.1.0
-
-**Date**: May 27, 2013
-
-* Initial version
+This document
 
 [twitter]: https://twitter.com/pyjacob
 [docs]: https://github.com/jmagnusson/bootstrap-modeltranslation
