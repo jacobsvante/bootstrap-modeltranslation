@@ -71,6 +71,7 @@
         };
 
         var configureMtField = function($inputs) {
+            var gettext = window.gettext || function(s) { return s; };
             var $firstInput = $inputs.first();
             var $parent = $firstInput.data('control-group-parent');
             var isRequired = $firstInput.prop('mtRequired');
@@ -83,15 +84,23 @@
             var $controls = $controlGroup.find('.controls');
             var $ul = $('<ul class="nav nav-tabs">').appendTo($controls);
             var $tabContent = $('<div class="tab-content"></div>').appendTo($controls);
+            var getGlyph = function(iconName, title) {
+                var $el = $('<i>').addClass(iconName).attr('title', title)
+                               .css('margin-left', '4px');
+                $el.tooltip();
+                return $el;
+            };
             var setGlyphs = function() {
                 var $input = $(this);
                 var $glyphs = $input.data('glyphs-el');
                 $glyphs.empty();
                 if ($input.prop('mtRequired') && !$input.val()) {
-                    $glyphs.append(' <i class="icon-exclamation-sign" title="Required"></i>');
+                    $glyphs.append(getGlyph('icon-exclamation-sign',
+                                            gettext('Required')));
                 }
                 if ($input.val()) {
-                    $glyphs.append(' <i class="icon-comment" title="Contains text"></i>');
+                    $glyphs.append(getGlyph('icon-comment',
+                                            gettext('Contains text')));
                 }
             };
             var removeOldParents = function() {
