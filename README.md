@@ -1,11 +1,11 @@
 # bootstrap-modeltranslation
+[![PyPI version](https://pypip.in/v/bootstrap-modeltranslation/badge.png)](https://pypi.python.org/pypi/bootstrap-modeltranslation)
 
 **Author:** Jacob Magnusson. [Follow me on Twitter][twitter]
 
 ## Overview
 
 bootstrap-modeltranslation is a mini-package for adding tabbable [django-modeltranslation] translation fields to [django-admin-bootstrapped].
-
 ![Example image](https://raw.github.com/jmagnusson/bootstrap-modeltranslation/master/example.png)
 
 ## Tested with
