@@ -1,5 +1,16 @@
 /*
-    Tabbable translation fields for django-admin-bootstrapped and django-modeltranslation
+ *  Tabbable translation fields for django-admin-bootstrapped and
+ *  django-modeltranslation.
+ *  Tested with:
+ *  - Django 1.6
+ *  - django-admin-bootstrap 0.4.3
+ *  - django-modeltranslation 0.7
+ *
+ *  NOTE #1: This is not very pretty code and might break if
+ *           any of the packages change the hmtl output.
+ *
+ *  NOTE #2: Not using django.jQuery as django-admin-bootstrapped doesn't use
+ *           it and we need to have access to the bootstrap tooltip plugin.
  */
 (function($) {
     $(function() {
@@ -30,6 +41,11 @@
                 }
                 var lang = getMtLangFromClass(className);
                 var $controls = $input.parent('.controls');
+                if (!$controls.length) {
+                    // This is to support clearable outputs for M
+                    //
+                    $controls = $input.parent().parent('.controls');
+                }
                 var $label = $controls.prev('.control-label').find(':first-child');
                 var labelName = getMtLabelName($label.text());
                 var fieldId = $input.attr('id');
@@ -166,4 +182,4 @@
         var groupedInputs = getGroupedMtInputs($mtInputs);
         configureMtFields(groupedInputs);
     });
-})(jQuery); // NOTE: Not using django.jQuery. It's way outdated, even in Django 1.5
+})(jQuery);

@@ -10,10 +10,10 @@ bootstrap-modeltranslation is a mini-package for adding tabbable [django-modeltr
 
 ## Tested with
 
-* Python 2.7.3
-* Django 1.5
-* [django-admin-bootstrapped] 0.3.2
-* [django-modeltranslation] 0.6.1
+* Python 2.7.5
+* Django 1.6
+* [django-admin-bootstrapped] 0.4.3
+* [django-modeltranslation] 0.7
 
 ## Installation
 
@@ -43,8 +43,8 @@ Import admin classes for inheritance and use just like you would the default one
 ```python
 from bootstrap_modeltranslation.admin import (
     TranslationAdmin,
-    TranslationTabularInline, 
-    TranslationStackedInline, 
+    TranslationTabularInline,
+    TranslationStackedInline,
     TranslationGenericTabularInline,
     TranslationGenericStackedInline)
 
