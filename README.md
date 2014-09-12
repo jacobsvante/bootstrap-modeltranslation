@@ -59,7 +59,7 @@ class SomeModelInlineAdmin(TranslationStackedInline):
 
 This document
 
-[twitter]: https://twitter.com/pyjacob
+[twitter]: https://twitter.com/jacobsvante_
 [docs]: https://github.com/jmagnusson/bootstrap-modeltranslation
 [django-modeltranslation]: https://github.com/deschler/django-modeltranslation
 [django-modeltranslation-docs-admin]: https://django-modeltranslation.readthedocs.org/en/latest/admin.html
