@@ -64,7 +64,9 @@
                     'data-mt-lang': lang,
                     'data-mt-label-name': labelName, // With language stripped out
                     'data-mt-field-id': fieldId, // With language stripped out
-                    'data-validation-msg': validationMsg
+                    'data-validation-msg': validationMsg,
+		    'data-mt-label-class': $controls.prev('.control-label').attr('class'),
+		    'data-mt-field-class': $controls.attr('class'),
                 }).prop({
                     'mtRequired': isRequired
                 });
@@ -94,9 +96,12 @@
             var fieldName = $firstInput.attr('data-mt-label-name');
             var firstLangFieldId = $firstInput.attr('id');
             var hasValidationMsgs = !!$.grep($inputs.attr('data-validation-msg'), function(n) { return(n); }).join();
-            var controlGroupClasses = hasValidationMsgs ? 'error' : '';
+	    var controlGroupClasses = hasValidationMsgs ? 'error' : '';
+	    var labelClasses = $firstInput.attr('data-mt-label-class');
+	    var fieldClasses = $firstInput.attr('data-mt-field-class');
+
             var $label = $('<label for="' + firstLangFieldId + '" class="' + (isRequired ? 'required' : '') + '">' + fieldName + ':</label>');
-            var $controlGroup = $('<div class="control-group ' + controlGroupClasses + '"><div><div class="control-label"></div><div class="controls"></div></div></div>').insertBefore($parent);
+            var $controlGroup = $('<div class="control-group form-group ' + controlGroupClasses + '"><div><div class="' + labelClasses + '"></div><div class="' + fieldClasses + '"></div><div style="clear:both"></div></div></div>').insertBefore($parent);
             var $controls = $controlGroup.find('.controls');
             var $ul = $('<ul class="nav nav-tabs">').appendTo($controls);
             var $tabContent = $('<div class="tab-content"></div>').appendTo($controls);
