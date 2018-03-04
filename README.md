@@ -1,5 +1,5 @@
 # bootstrap-modeltranslation
-[![PyPI version](https://pypip.in/v/bootstrap-modeltranslation/badge.png)](https://pypi.python.org/pypi/bootstrap-modeltranslation)
+[![PyPI version](https://img.shields.io/pypi/v/bootstrap-modeltranslation.svg)](https://pypi.python.org/pypi/bootstrap-modeltranslation)
 
 **Author:** Jacob Magnusson. [Follow me on Twitter][twitter]
 
